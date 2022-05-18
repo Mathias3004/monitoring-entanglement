@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# walltime requested
+#SBATCH -t 11:59:00
+
+# number of nodes and partition
+#SBATCH -N 1 -p RM
+
+# cores per node
+#SBATCH --ntasks-per-node=128
+
+# modules
+module load gcc
+module load openmpi/4.0.5-gcc10.2.0
+module load mkl
+
+# mpirun
+mpirun -np 128 ./main_U_in_out ${1} ${2} ${3} ${4}

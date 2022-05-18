@@ -1,0 +1,12 @@
+input{
+cutoff = 1E-8
+Maxm = 600
+type = localization
+loc_type = pseudo
+
+save = 1
+
+verbose = 1
+output_folder = store/data_FS_paper_loc
+
+}

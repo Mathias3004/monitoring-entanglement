@@ -1,0 +1,21 @@
+#!/bin/bash
+
+count=0
+
+for N in 10 20 30 40 50 
+do
+    #for Nl in $((N))
+    #for Nl in $(seq $((N/2)) $((N/2)) $((2*N)) $((4*N)) )
+    for Nl in 2 4 6 8
+    do
+        for i in `seq 1 4`
+        do
+            sbatch run_MPI_FS input_U $Nl $N 1
+            echo "sbatch run_MPI_FS input_U $Nl $N 1"
+            
+            count=$((count+1))
+        done
+    done
+done
+
+echo "$count jobs submitted"

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# time for each run in loop
+part="RM-512"
+t="10:00:00"
+
+# command for each job to loop over with different params
+cmd="./main_FS_layer"
+input="input_U"
+count=0
+
+for i in `seq 1 8`
+do
+
+    for N in 24 
+    do
+        sbatch --partition=$part --time=$t run_MPI $cmd $input 20 $N 1
+        echo "sbatch --partition=$part --time=$t run_MPI $cmd $input 20 $N 1"
+        
+        count=$((count+1))
+    done
+
+done
+
+echo "$count jobs submitted"

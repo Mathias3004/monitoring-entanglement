@@ -1,0 +1,15 @@
+input{
+cutoff = 1E-6
+Maxm = 300
+
+Omega = 10
+gamma = 1
+
+t_ev = 100.
+N_collect = 100
+
+type = BS
+verbose = 0
+output_folder = store/data_traj_BS
+
+}
