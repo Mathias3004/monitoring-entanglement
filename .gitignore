@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+store/
+slurm/
+old_shit/
