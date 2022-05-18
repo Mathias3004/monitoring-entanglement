@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# time for each run in loop
+t="12:00:00"
+
+# command for each job to loop over with different params
+cmd="./main_io_direct"
+input="input_io_direct"
+count=0
+
+for p in 0. .1 .2 .3 .4 .5 .6 .7 .8 .9 1.
+do
+    for Nl in 2
+    do
+        for N in 20 24 28 32 36 40
+        do
+            sbatch --time=$t run_MPI $cmd $input $p $Nl $N
+            echo "sbatch --time=$t run_MPI $cmd $input $p $Nl $N"
+            
+            count=$((count+1))
+        done
+    done
+done
+
+echo "$count jobs submitted"

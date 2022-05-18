@@ -1,0 +1,19 @@
+#!/bin/bash
+
+count=0
+
+for N in 20 25 30 35 40 45 50
+do
+    for p in .6 .7 .8 .9
+    do
+        for i in `seq 1 1`
+        do
+            sbatch run_MPI_FS_measurement input_U_measurement $p $N 4
+            echo "sbatch run_MPI_FS_measurement input_U_measurement $p $N 4"
+            
+            count=$((count+1))
+        done
+    done
+done
+
+echo "$count jobs submitted"

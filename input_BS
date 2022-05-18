@@ -1,0 +1,9 @@
+input{
+cutoff = 1E-6
+Maxm = 300
+
+type = BS
+verbose = 0
+output_folder = store/data_BS
+
+}

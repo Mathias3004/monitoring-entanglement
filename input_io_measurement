@@ -1,0 +1,14 @@
+input{
+cutoff = 1E-8
+Maxm = 300
+
+t_ev = 100.
+N_collect = 100
+
+gamma = 1
+N_layer = 2
+
+verbose = 1
+output_folder = store/data_io_measurement
+
+}

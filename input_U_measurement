@@ -1,0 +1,8 @@
+input{
+cutoff = 1E-8
+Maxm = 300
+
+verbose = 1
+output_folder = store/data_FS_measurement
+
+}

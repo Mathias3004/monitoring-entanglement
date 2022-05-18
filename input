@@ -1,0 +1,7 @@
+input{
+cutoff = 1E-6
+Maxm = 300
+
+output_folder = store/test_50
+
+}

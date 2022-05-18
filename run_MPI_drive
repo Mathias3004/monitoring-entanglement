@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# walltime requested
+#SBATCH -t 8:00:00
+
+# number of nodes
+#SBATCH -N 1
+
+# cores per node
+# --ntasks-per-node=28
+
+# mpirun
+mpirun -np 28 ./main_BS_trajectory ${1} ${2} ${3} ${4}

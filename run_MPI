@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+# number of nodes
+#SBATCH -N 1
+
+# cores per node
+#SBATCH --ntasks-per-node=128
+
+# modules
+module load gcc
+module load openmpi/4.0.5-gcc10.2.0
+module load mkl
+
+# mpirun
+mpirun -np 128 ${1} ${2} ${3} ${4} ${5}
